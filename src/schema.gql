@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Author {
+  id: ID!
+  name: String!
+  posts: [Post!]!
+}
+
+type Post {
+  id: ID!
+  title: String!
+  author: Author!
+}
+
+type Query {
+  post: Post!
+  authors: [Author!]!
+}
+
+type Mutation {
+  createPost(title: String!, authorId: String!): Post!
+  createAuthor(name: String!): Author!
+}
